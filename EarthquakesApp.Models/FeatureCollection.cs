@@ -9,7 +9,7 @@ namespace EarthquakesApp.Models
         public Metadata Metadata { get; set; }
 
         [JsonProperty("features")]
-        public IList<Feature> Features { get; set; }
+        public List<Feature> Features { get; set; }
     }
 
 }

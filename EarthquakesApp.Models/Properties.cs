@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using EarthquakesApp.Models.utils;
+using Newtonsoft.Json;
 using System;
 
 namespace EarthquakesApp.Models
@@ -12,6 +13,7 @@ namespace EarthquakesApp.Models
         public string Place { get; set; }
 
         [JsonProperty("time")]
+        [JsonConverter(typeof(MicrosecondEpochConverter))]
         public DateTime Time { get; set; }
 
         [JsonProperty("title")]

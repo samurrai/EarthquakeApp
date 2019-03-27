@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +50,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EarthquakesApp.Models\EarthquakesApp.Models.csproj">
+      <Project>{5BA11A74-C46C-4E86-8207-25D7C2AFD728}</Project>
+      <Name>EarthquakesApp.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EarthquakesApp.Services.Abstract\EarthquakesApp.Services.Abstract.csproj">
+      <Project>{F57C3189-6BE9-4E85-929B-35871378F181}</Project>
+      <Name>EarthquakesApp.Services.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EarthquakesApp.Services\EarthquakesApp.Services.csproj">
+      <Project>{B445FD08-A00A-4121-9F0E-DFA33CDCDABA}</Project>
+      <Name>EarthquakesApp.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
